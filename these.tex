@@ -351,7 +351,7 @@ Dans son sens strict, la métagénomique correspond à l’étude de l’ensembl
 
 
 
-\paragraph{Une ordination} est une analyse multivariée visant à décrire des objets caractérisés par plusieurs variables. Par exemple un échantillon est caractérisé par différentes abondances de bactéries. Il existe plusieurs méthodes d'ordination. La plus connue étant l'Analyse en Composantes Principales (PCA) basée sur une matrice de covariances. En écologie l'Analyse en Coordonnées Principales (PCoA) est préférée. Elle se base sur une matrice de distances. Elle consiste à projeter des points d'un espace à n dimensions vers un espace visible en 2 dimensions.
+\paragraph{Une ordination} est une analyse multivariée visant à décrire des objets caractérisés par plusieurs variables. Par exemple un échantillon est caractérisé par différentes abondances de bactéries. Il existe plusieurs méthodes d'ordination. La plus connue étant l'Analyse en Composantes Principales (PCA) basée sur une matrice de covariances. En écologie, l'Analyse en Coordonnées Principales (PCoA) est préférée. Elle se base sur une matrice de distances. Elle consiste à projeter des points d'un espace à n dimensions vers un espace visible en 2 dimensions.
 La figure \ref{pcoatuto} illustre ce principe avec un exemple à deux dimensions seulement.
 
 \begin{figure}[!h]
@@ -369,23 +369,24 @@ La figure \ref{pcoatuto} illustre ce principe avec un exemple à deux dimensions
    \begin{equation}
     BC_{jk} = 1 - \frac{2\sum_{i=1}^{p}min(N_{ij},N_{ik})}{\sum_{i=1}^{p}(N_{ij} + N_{ik})}
    \end{equation}
-      \caption{Où $N_{ij}$ est l'abondance d'une  espèce i dans l'échantillon j et $N_{ik}$ l'abondance de la même espèce i dans l'échantillon k. Le terme min(.,.) correspond au minimum obtenu pour deux comptes sur les mêmes échantillons. Les sommes situés au numérateur et dénominateur sont réalisés sur l'ensemble des espèces présentes dans les échantillons.}
+      \caption{Où $N_{ij}$ est l'abondance d'une  espèce i dans l'échantillon j et $N_{ik}$ l'abondance de la même espèce i dans l'échantillon k. Le terme min(.,.) correspond au minimum obtenu pour deux comptes sur les mêmes échantillons. Les sommes situées au numérateur et dénominateur sont réalisés sur l'ensemble des espèces présentes dans les échantillons.}
 \end{mycapequ}
 
 
-\paragraph{Un fichier fastq} contient les séquences des reads et leurs qualités par nucléotides exprimés en Phred Score. Chaque read est représenté par 4 lignes dans un fichier textuelle (Figure \ref{fastq}). Ces fichiers sont produit par le séquençage haut-débit.
+\paragraph{Un fichier FASTQ} contient les séquences des reads et leurs qualités par nucléotides exprimés en Phred Score. Chaque read est représenté par 4 lignes dans un fichier textuel (Figure \ref{fastq}). Ces fichiers sont produit par le séquençage haut-débit.
+%FIXME Ces fichiers ne sont pas nécessairement produits par NGS (exemple Genebank)
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[scale=0.6]{img/fastq.jpg}\hfill
 \end{center}
-\caption{Exemple d'un read contenu dans un fichier fastq. Les scores de qualités sont encodés avec des symboles ASCII. Par exemple le quatorzième T  est associé au symbole « : » correspondant au score phred de 25, soit une probabilité de 0,3\% d'erreur.}
+\caption{Exemple d'un read contenu dans un fichier FASTQ. Les scores de qualités sont encodés avec des symboles ASCII. Par exemple le quatorzième T  est associé au symbole « : » correspondant au score phred de 25, soit une probabilité de 0,3 \% d'erreur.}
 \label{fastq}
 \end{figure}
 
 \paragraph{Le multiplexage} est utilisé pour pouvoir séquencer plusieurs échantillons différents dans une même librairie. Pour cela, les ADNs de chaque échantillon sont marqués avec une courte séquence nucléotidique appelée barcode ou index suivant la technologie. Lors de l'analyse bio-informatique, les données sont démultiplexées afin d'associer chaque read à son échantillon.
 
-\paragraph{Un graphe} est un object mathématique défini par des nœuds (nodes) reliés par des arrêtes (edges). Les graphes permettent de répondre à diffèrent problème mathématique. Par exemple le problème des sept ponts de Königsberg, qui consiste à savoir s'il existe une promenade passant par 7 ponts une seul fois. La théorie des graphes est très utilisée en bio-informatique.
+\paragraph{Un graphe} est un objet mathématique défini par des nœuds (nodes) reliés par des arrêtes (edges). Les graphes permettent de répondre à différents problèmes mathématiques. Par exemple le problème des sept ponts de Königsberg, qui consiste à savoir s'il existe une promenade passant par 7 ponts une seul fois. La théorie des graphes est très utilisée en bio-informatique.
 
 \newpage
 
